@@ -12,6 +12,53 @@ body {
   overflow-x: hidden;
   color: white;
 }
+/* Hero Buttons */
+#home button {
+  padding: 0.75rem 2rem;
+  margin: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Get Started Button */
+#getStartedBtn {
+  background: linear-gradient(135deg, #00d4ff, #0072ff);
+  color: white;
+  border: 2px solid #00d4ff;
+}
+#getStartedBtn:hover {
+  background: #00d4ff; /* solid color on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+#DoubtSolving {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid #00d4ff;
+}
+
+#DoubtSolving:hover {
+  background: #00d4ff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Make buttons responsive and centered */
+#home .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -42,16 +89,21 @@ a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 .logo {
-  font-size: 1.5rem;
+  .logo {
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+  display: flex;                  /* put image + text side by side */
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  background: linear-gradient(45deg, #00d4ff, #090979, #ff6b6b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  animation: glowPulse 3s ease-in-out infinite alternate;
+  font-size: 1.5rem;
+  color: black;                   /* black text */
   user-select: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  cursor: default;
+  z-index: 1000;
+}
 }
 @keyframes glowPulse {
   from { filter: hue-rotate(0deg); }
@@ -234,16 +286,16 @@ a:hover {
   text-shadow: 0 0 6px rgba(0,0,0,0.3);
 }
 #home button {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-  color: white;
   padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 9999px;
+  margin: 0 0.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  font-size: 1.125rem;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 10px 15px rgba(59, 130, 246, 0.4);
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
 }
 #home button:hover {
   box-shadow: 0 15px 25px rgba(139, 92, 246, 0.6);

@@ -8,3 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const homeLink = document.getElementById("homeLink");
+
+  if (homeLink) {
+    homeLink.addEventListener("click", (e) => {
+      e.preventDefault(); // stop default # behavior
+      window.location.href = "main.html"; // redirect
+    });
+  }
+});

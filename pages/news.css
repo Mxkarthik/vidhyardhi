@@ -42,16 +42,21 @@ a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 .logo {
-  font-size: 1.5rem;
+  .logo {
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+  display: flex;                  /* put image + text side by side */
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  background: linear-gradient(45deg, #00d4ff, #090979, #ff6b6b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  animation: glowPulse 3s ease-in-out infinite alternate;
+  font-size: 1.5rem;
+  color: black;                   /* black text */
   user-select: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  cursor: default;
+  z-index: 1000;
+}
 }
 @keyframes glowPulse {
   from { filter: hue-rotate(0deg); }
