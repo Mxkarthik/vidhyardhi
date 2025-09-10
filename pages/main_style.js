@@ -18,3 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getStartedBtn = document.getElementById("DoubtSolving");
+
+  if (DoubtSolving) {
+    getStartedBtn.addEventListener("click", () => {
+      // Redirect to tech-news.html
+      window.location.href = "doubt.html";
+    });
+  }
+});

@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (homeLink) {
     homeLink.addEventListener("click", (e) => {
-      e.preventDefault(); // stop default # behavior
-      window.location.href = "main.html"; // redirect
+      e.preventDefault();
+      // Redirect to your main page
+      window.location.href = "main.html"; // <-- change to your actual main page
     });
   }
 });

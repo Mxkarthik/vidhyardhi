@@ -33,7 +33,6 @@ body {
   border: 2px solid #00d4ff;
 }
 #getStartedBtn:hover {
-  background: #00d4ff; /* solid color on hover */
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
@@ -79,7 +78,6 @@ a:hover {
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
-  transition: background 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,37 +86,45 @@ a:hover {
 .navbar:hover {
   background: rgba(255, 255, 255, 0.15);
 }
+/* Logo */
 .logo {
-  .logo {
-  position: fixed;
-  top: 1rem;
-  left: 1.5rem;
-  display: flex;                  /* put image + text side by side */
-  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: black;                   /* black text */
+  color: black;        /* Force black color */
   user-select: none;
   letter-spacing: 0.1em;
   cursor: default;
-  z-index: 1000;
+  z-index: 1001;       /* Ensure above overlays */
+  position: relative;  /* Remove fixed; stays inside navbar */
 }
-}
+
 @keyframes glowPulse {
   from { filter: hue-rotate(0deg); }
   to { filter: hue-rotate(30deg); }
 }
+/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
+
 .nav-links li {
   font-weight: 500;
   font-size: 1rem;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: white;        /* links white */
+  transition: color 0.3s;
+}
+
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
 /* Background overlays */
 .bg-overlay {
   position: fixed;

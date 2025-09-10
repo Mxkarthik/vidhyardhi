@@ -137,5 +137,20 @@ window.submitAnswer = function(doubtId) {
   }
 }
 
+
+// linking main and this page 
+document.addEventListener("DOMContentLoaded", () => {
+  const homelinking = document.getElementById("homelinking");
+
+  if (homelinking) {
+    homelinking.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Redirect to your main page
+      window.location.href = "main.html"; // <-- change to your actual main page
+    });
+  }
+});
+
+
 // Initial render
 renderDoubts();
