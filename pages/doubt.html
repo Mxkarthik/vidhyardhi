@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ask Doubts</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="doubt.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Vidhyarthi</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#ask">Ask Doubt</a></li>
+      <li><a href="#doubts">Unsolved Doubts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Background Elements -->
+  <div class="bg-overlay"></div>
+  <div class="grid-bg"></div>
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+  <div class="tech-overlay tech1">{"?"}</div>
+  <div class="tech-overlay tech2">1010?</div>
+  <div class="tech-overlay tech3">console.log('Help');</div>
+  <div class="tech-overlay tech4">&lt;/&gt;</div>
+  <div class="tech-overlay tech5">function(){ }</div>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Hero Section -->
+    <section id="home">
+      <h1>Doubts Platform</h1>
+      <p>Ask your technical questions and get answers from our community of experts</p>
+    </section>
+
+    <!-- Doubt Form Section -->
+    <section id="ask" class="doubt-form">
+      <h2>Ask Your Doubt</h2>
+      <form id="doubtForm">
+        <div class="form-group">
+          <label for="title">Question Title</label>
+          <input type="text" id="title" placeholder="What's your question?" required>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="">Select a category</option>
+            <option value="programming">Programming</option>
+            <option value="web-development">Web Development</option>
+            <option value="ai-ml">AI & Machine Learning</option>
+            <option value="cloud">Cloud Computing</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="databases">Databases</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="description">Detailed Description</label>
+          <textarea id="description" placeholder="Describe your doubt in detail..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Doubt</button>
+      </form>
+    </section>
+
+    <!-- Doubts Section -->
+    <section id="doubts" class="doubts-section">
+      <h2>Unsolved Doubts</h2>
+      <div class="doubts-list" id="doubtsList">
+        <!-- Doubts will be populated here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Link JS -->
+  <script src="doubt.js"></script>
+</body>
+</html>
