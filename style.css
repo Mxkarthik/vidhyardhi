@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -99,6 +99,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 400px;
+  margin-right: 50px;
   padding: 2rem;
   z-index: 1;
 }
@@ -152,18 +153,16 @@ body {
   position: fixed;
   top: 1rem;
   left: 1.5rem;
+  display: flex;                  /* put image + text side by side */
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  background: linear-gradient(45deg, #00d4ff, #090979, #ff6b6b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;                   /* black text */
   user-select: none;
   letter-spacing: 0.1em;
   cursor: default;
   z-index: 1000;
-  text-shadow: 0 0 20px rgba(0,0,0,0.5);
-  animation: glowPulse 2s ease-in-out infinite alternate;
 }
 @keyframes glowPulse {
   from { text-shadow: 0 0 20px rgba(0,0,0,0.5); filter: hue-rotate(0deg); }
