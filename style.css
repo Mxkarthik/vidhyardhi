@@ -1,0 +1,171 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modern Tech Background Overlays */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(6, 182, 212, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+  animation: pulseOverlay 6s infinite;
+  z-index: -1;
+}
+
+@keyframes pulseOverlay {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Floating Shapes */
+.floating-shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  animation: float 4s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.shape1 { width: 80px; height: 80px; top: 10%; left: 10%; }
+.shape2 { width: 60px; height: 60px; top: 20%; right: 15%; animation-delay: 2s; }
+.shape3 { width: 100px; height: 100px; bottom: 15%; left: 20%; animation-delay: 4s; }
+
+/* Grid Pattern */
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  z-index: -2;
+  animation: slideGrid 10s linear infinite;
+}
+@keyframes slideGrid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+/* Floating Tech Text */
+.tech-overlay {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+}
+.tech1 { top: 15%; left: 5%; animation: driftLeft 15s infinite linear; }
+.tech2 { top: 25%; right: 8%; animation: driftRight 12s infinite linear; transform: scale(1.2); }
+.tech3 { bottom: 20%; left: 12%; animation: driftUp 18s infinite linear; }
+.tech4 { top: 40%; left: 70%; animation: sparkle 10s infinite ease-in-out; font-size: 1.5rem; }
+.tech5 { bottom: 30%; right: 5%; animation: driftDown 20s infinite linear; transform: scale(0.8); }
+
+@keyframes driftLeft { 0% {transform: translateX(0);} 100% {transform: translateX(-100px);} }
+@keyframes driftRight { 0% {transform: translateX(0);} 100% {transform: translateX(100px);} }
+@keyframes driftUp { 0% {transform: translateY(0);} 100% {transform: translateY(-150px);} }
+@keyframes driftDown { 0% {transform: translateY(0);} 100% {transform: translateY(150px);} }
+@keyframes sparkle { 0%,100% {opacity: 0.3;} 50% {opacity: 0.6;} }
+
+/* Form Styling */
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  z-index: 1;
+}
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+.input-field {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+.input-field:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+/* Toggle Buttons */
+.toggle-btn {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 8px 0 0 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: #f8fafc;
+  color: #64748b;
+}
+.toggle-btn.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+}
+.toggle-btn:last-child { border-radius: 0 8px 8px 0; }
+
+/* Modern Logo */
+.logo {
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #00d4ff, #090979, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+  letter-spacing: 0.1em;
+  cursor: default;
+  z-index: 1000;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+@keyframes glowPulse {
+  from { text-shadow: 0 0 20px rgba(0,0,0,0.5); filter: hue-rotate(0deg); }
+  to { text-shadow: 0 0 50px rgba(0,0,0,0.5); filter: hue-rotate(30deg); }
+}

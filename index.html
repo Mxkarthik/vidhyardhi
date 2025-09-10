@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vidyarthi - Educational Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="logo" aria-label="Vidyarthi logo">Vidyarthi</div>
+  <div class="bg-overlay"></div>
+  <div class="grid-bg"></div>
+  <div class="floating-shape shape1"></div>
+  <div class="floating-shape shape2"></div>
+  <div class="floating-shape shape3"></div>
+
+  <!-- Floating Technology Overlays -->
+  <div class="tech-overlay tech1">{ }</div>
+  <div class="tech-overlay tech2">1100101</div>
+  <div class="tech-overlay tech3">; console.log('Learn');</div>
+  <div class="tech-overlay tech4">&lt;/&gt;</div>
+  <div class="tech-overlay tech5">function(){ }</div>
+
+  <div class="form-container" role="main" aria-labelledby="formTitle">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 id="formTitle" class="text-4xl font-bold text-gray-800 mb-2">Vidyarthi</h1>
+      <p class="text-gray-600">Empowering Education Through Technology</p>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="flex mb-6" role="tablist" aria-label="Login and Sign Up Tabs">
+      <button
+        id="loginTab"
+        class="toggle-btn active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="loginForm"
+        tabindex="0"
+      >
+        Login
+      </button>
+      <button
+        id="signupTab"
+        class="toggle-btn"
+        role="tab"
+        aria-selected="false"
+        aria-controls="signupForm"
+        tabindex="-1"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="block" role="tabpanel" aria-labelledby="loginTab">
+      <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Welcome Back</h2>
+      <form class="space-y-4" onsubmit="return false;">
+        <div>
+          <input
+            type="text"
+            id="loginUsername"
+            placeholder="Username"
+            required
+            class="input-field w-full"
+            autocomplete="username"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+            class="input-field w-full"
+            autocomplete="current-password"
+          />
+        </div>
+        <button type="button" onclick="handleLogin()" class="btn-primary w-full">Login</button>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupForm" class="hidden" role="tabpanel" aria-labelledby="signupTab" tabindex="0">
+      <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Create Account</h2>
+      <form class="space-y-4" onsubmit="return false;">
+        <div>
+          <input
+            type="text"
+            id="signupUsername"
+            placeholder="Username"
+            required
+            class="input-field w-full"
+            autocomplete="username"
+          />
+        </div>
+        <div>
+          <input
+            type="email"
+            id="signupEmail"
+            placeholder="Email"
+            required
+            class="input-field w-full"
+            autocomplete="email"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Password"
+            required
+            class="input-field w-full"
+            autocomplete="new-password"
+          />
+        </div>
+        <button type="button" onclick="handleSignup()" class="btn-primary w-full">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
