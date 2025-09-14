@@ -8,24 +8,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const getStartedBtn = document.getElementById("getStartedBtn");
 
   if (getStartedBtn) {
     getStartedBtn.addEventListener("click", () => {
-      // Redirect to tech-news.html
       window.location.href = "news.html";
     });
   }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const getStartedBtn = document.getElementById("DoubtSolving");
+  const doubtBtn = document.getElementById("DoubtSolving");
 
-  if (DoubtSolving) {
-    getStartedBtn.addEventListener("click", () => {
-      // Redirect to tech-news.html
+  if (doubtBtn) {
+    doubtBtn.addEventListener("click", () => {
       window.location.href = "doubt.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const resourcesLink = document.getElementById("Resources");
+
+  if (resourcesLink) {
+    resourcesLink.addEventListener("click", (e) => {
+      e.preventDefault(); // prevent #feed scrolling
+      window.location.href = "resource.html";
     });
   }
 });
